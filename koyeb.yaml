@@ -1,0 +1,17 @@
+name: telegram-instagram-reporter
+services:
+  - name: app
+    ports:
+      - port: 8080
+        protocol: http
+    scalings:
+      min: 1
+    docker:
+      image: koyeb/python:3.11
+    regions:
+      - fra
+    instance_types:
+      type: nano
+    commands:
+      - pip install -r requirements.txt
+      - python bot.py
