@@ -1,5 +1,5 @@
-certifi>=2020.6.20
-chardet>=3.0.4
-colorama>=0.4.3
-idna>=2.10
-requests>=2.24.0
+python-telegram-bot==13.15
+requests==2.31.0
+rich==13.7.0
+colorist==1.5.2
+python-dotenv==1.0.0
