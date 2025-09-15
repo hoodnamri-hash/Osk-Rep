@@ -479,6 +479,25 @@ def main() -> None:
     # تشغيل البوت
     console.print("✅ بدأ تشغيل بوت Team 777...", style="bold green")
     application.run_polling(allowed_updates=Update.ALL_TYPES)
+from flask import Flask
+app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Bot is running!"
+
+@app.route('/health')
+def health():
+    return 'OK', 200
+
+if __name__ == '__main__':
+    # تشغيل البوت في خيط منفصل
+    import threading
+    bot_thread = threading.Thread(target=main)
+    bot_thread.daemon = True
+    bot_thread.start()
+    
+    # تشغيل خادم الويب
+    app.run(host='0.0.0.0', port=8080)
 if __name__ == "__main__":
     main()

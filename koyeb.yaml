@@ -7,7 +7,7 @@ services:
     scalings:
       min: 1
     docker:
-      image: koyeb/python:3.11
+      image: koyeb/python:3.10  # تغيير إلى 3.10 بدلاً من 3.11
     regions:
       - fra
     instance_types:
