@@ -4,7 +4,6 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # ضع توكن البوت هنا
 TOKEN = "8356449349:AAHGWKhn6WrhpY3QHmO9fmg1oYDLtVAYBHo"
-"
 
 # مثال على أمر /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
